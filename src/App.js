@@ -1,23 +1,42 @@
 import React from 'react';
 import './App.css';
-import {Nav, Navbar, Form, FormControl, Button} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {ReactNavbar} from "react-responsive-animate-navbar";
 
 class App extends React.Component{
   render(){
     return(
-      <Navbar bg="primary" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-light">Search</Button>
-        </Form>
-      </Navbar>
+    <ReactNavbar
+      color="rgb(25, 25, 25)"
+      logo="https://svgshare.com/i/KHh.svg"
+      menu={[
+        { name: "HOME", to: "/" },
+        { name: "ARTICLES", to: "/articles" },
+        { name: "ABOUT ME", to: "/about" },
+        { name: "CONTACT", to: "/contact" },
+      ]}
+      social={[
+        {
+          name: "Linkedin",
+          url: "https://www.linkedin.com/in/nazeh-taha/",
+          icon: ["fab", "linkedin-in"],
+        },
+        {
+          name: "Facebook",
+          url: "https://www.facebook.com/nazeh200/",
+          icon: ["fab", "facebook-f"],
+        },
+        {
+          name: "Instagram",
+          url: "https://www.instagram.com/nazeh_taha/",
+          icon: ["fab", "instagram"],
+        },
+        {
+          name: "Twitter",
+          url: "http://nazehtaha.herokuapp.com/",
+          icon: ["fab", "twitter"],
+        },
+      ]}
+    />
     );
   }
 }
