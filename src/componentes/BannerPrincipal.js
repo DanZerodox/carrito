@@ -1,6 +1,5 @@
 import React from 'react';
 import '../App.css';
-import Image from 'react-bootstrap/Image';
 function ResponsiveImage( { src, width, height, widthdinamic, sumar } ) {
     return (
       <div

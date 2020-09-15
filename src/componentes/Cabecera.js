@@ -14,7 +14,7 @@ export class Cabecera extends React.Component{
         return(
             <div style={{ padding: '20px 75px', display: "flex", alignItems: "center" }}>
             <div style={{ flex: 1, fontSize: 24 }}>
-              {this.state.ocultar==false?
+              {this.state.ocultar===false?
                 <div>Productos Populares</div>  
                 :null
               }    
