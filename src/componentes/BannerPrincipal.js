@@ -19,8 +19,7 @@ function ResponsiveImage( { src, width, height, widthdinamic, sumar } ) {
           />
       </div>
     );
-  }
-  
+  }  
 export class BannerPrincipal extends React.Component{
 constructor(props){
     super(props);
