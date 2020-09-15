@@ -14,7 +14,7 @@ export class Productos extends React.Component{
         super(props);
         this.state={
             productos: [],
-            padding:67,
+            padding:56,
             width:260,
             heightimg:135,
             leftimg:32,
@@ -150,7 +150,7 @@ export class Productos extends React.Component{
             var leftimg
             this.setState({ padding:40, width:384, heightimg:180, leftimg:38, heightcard:360, marginright: 60 },()=>{console.log(this.state.height)});
         }else{
-            this.setState({ padding:67, width:260, heightimg:135, leftimg:32, heightcard:314, marginright: 42 },()=>{console.log(this.state.height)});
+            this.setState({ padding:56, width:260, heightimg:135, leftimg:32, heightcard:314, marginright: 42 },()=>{console.log(this.state.height)});
 
         }
     }

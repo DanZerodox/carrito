@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import {BannerPrincipal} from './componentes/BannerPrincipal';
 import {Productos} from './componentes/Productos';
 import {Cabecera} from './componentes/Cabecera';
+import {Footer} from './componentes/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
     <BannerPrincipal></BannerPrincipal>
     <Cabecera></Cabecera>
     <Productos></Productos>
+    <Footer></Footer>
   </React.StrictMode>,
   document.getElementById('root')
 );
