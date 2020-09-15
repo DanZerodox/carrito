@@ -13,17 +13,32 @@ export class Productos extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            productos: []
+            productos: [],
+            padding:67,
+            width:260,
+            heightimg:135,
+            leftimg:30,
+            heightcard:314,
+            marginright:87
         }
     }
     render(){
         return(
-            <div className="row">
+            <div className="row" style={{display:'flex', flexWrap:'wrap', padding:'20px '+this.state.padding+'px'}}>
                 {
                      this.state.productos.map(item=>(
-                        <Card className='card' style={{ width: 260, height: 290, margin: 10, display: "inline-block" }}>
+                        <Card className='card' style={{ width: this.state.width+'px', height: this.state.heightcard, margin: 10, display: "inline-block" }}>
                             <CardActionArea>
-                                <CardMedia style={{height:135, width:80, position:'relative',left:85}} image={Constantes.CONEXION_PRODUCCION+"Content/Assets/Images/"+item.ArtSku+".png"}>
+                                <div style={{
+                                        marginLeft: 8,
+                                        fontWeight: "bold",
+                                        whiteSpace: "nowrap",
+                                        overflow: "hidden",
+                                        fontSize: 15,
+                                        textOverflow: "ellipsis",
+                                        padding:10
+                                }}>{item.ArtDes}</div>
+                                <CardMedia style={{height:this.state.heightimg, width:80, position:'relative',left:this.state.leftimg+'%'}} image={Constantes.CONEXION_PRODUCCION+"Content/Assets/Images/"+item.ArtSku+".png"}>
 
                                 </CardMedia>
                                 <CardContent style={{ height: 50 }}>
@@ -36,7 +51,7 @@ export class Productos extends React.Component{
                                         textOverflow: "ellipsis"
                                     }}
                                     >
-                                    {item.ArtDes}
+                                    {item.ArtDesTv}
                                     </div>
                                     <div style={{ margin: 5 }}>Precio: ${item.ArtPVenta}.00 x 1 Caja</div>
                                     <div style={{ color: "#1a9349", fontWeight: "bold", margin: 5 }}>
@@ -44,11 +59,11 @@ export class Productos extends React.Component{
                                     </div>    
                                 </CardContent>
                                 <CardActions
-                                    style={{ display: "flex", alignItems: "center", height: 45, padding:'8px 15px' }}
+                                    style={{ display: "flex", alignItems: "center", height: 45, padding:'8px 15px',borderTop:'2px solid #efefef' }}
                                     >
                                      <Button
                                         size="small"
-                                        style={{ marginRight: 87 }}
+                                        style={{ marginRight: this.state.marginright }}
                                         onClick={() => {
                                         this.props.history.push("/details/");
                                         }}
@@ -82,6 +97,8 @@ export class Productos extends React.Component{
                 console.log(this.state.productos);
             })
         });     
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize();
     }
 
     Califacion(unit){
@@ -123,6 +140,18 @@ export class Productos extends React.Component{
         });
 
         return result;
+    }
+
+    
+    resize() {
+        const height = window.innerWidth;
+        
+        if(height<600){
+            this.setState({ padding:40, width:384, heightimg:180, leftimg:40, heightcard:360, marginright: 205 },()=>{console.log(this.state.height)});
+        }else{
+            this.setState({ padding:67, width:260, heightimg:135, leftimg:30, heightcard:314, marginright: 87 },()=>{console.log(this.state.height)});
+
+        }
     }
 
 }
