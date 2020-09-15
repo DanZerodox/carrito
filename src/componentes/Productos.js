@@ -19,7 +19,7 @@ export class Productos extends React.Component{
             heightimg:135,
             leftimg:30,
             heightcard:314,
-            marginright:87
+            marginright:42
         }
     }
     render(){
@@ -63,7 +63,7 @@ export class Productos extends React.Component{
                                     >
                                      <Button
                                         size="small"
-                                        style={{ marginRight: this.state.marginright }}
+                                        style={{ marginRight: this.state.marginright+'%' }}
                                         onClick={() => {
                                         this.props.history.push("/details/");
                                         }}
@@ -147,9 +147,9 @@ export class Productos extends React.Component{
         const height = window.innerWidth;
         
         if(height<600){
-            this.setState({ padding:40, width:384, heightimg:180, leftimg:40, heightcard:360, marginright: 205 },()=>{console.log(this.state.height)});
+            this.setState({ padding:40, width:384, heightimg:180, leftimg:40, heightcard:360, marginright: 60 },()=>{console.log(this.state.height)});
         }else{
-            this.setState({ padding:67, width:260, heightimg:135, leftimg:30, heightcard:314, marginright: 87 },()=>{console.log(this.state.height)});
+            this.setState({ padding:67, width:260, heightimg:135, leftimg:30, heightcard:314, marginright: 42 },()=>{console.log(this.state.height)});
 
         }
     }
