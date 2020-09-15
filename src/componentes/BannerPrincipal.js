@@ -15,7 +15,6 @@ function ResponsiveImage( { src, width, height, widthdinamic, sumar } ) {
         <img
           src={ src }
           className="responsive-image__image"
-          alt="description of image"
           />
       </div>
     );
