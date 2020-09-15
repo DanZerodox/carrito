@@ -3,19 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {BannerPrincipal} from './componentes/BannerPrincipal';
-import {Productos} from './componentes/Productos';
-import {Cabecera} from './componentes/Cabecera';
-import {Footer} from './componentes/Footer';
 
+import {Footer} from './componentes/Footer';
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import {InicioProductos} from './componentes/InicioProductos';
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-    <BannerPrincipal></BannerPrincipal>
-    <Cabecera></Cabecera>
-    <Productos></Productos>
-    <Footer></Footer>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+      <Route path="/" exact={true} component={InicioProductos}></Route>
+      <Footer></Footer>
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
