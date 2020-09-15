@@ -17,7 +17,7 @@ export class Productos extends React.Component{
             padding:67,
             width:260,
             heightimg:135,
-            leftimg:30,
+            leftimg:32,
             heightcard:314,
             marginright:42
         }
@@ -38,7 +38,7 @@ export class Productos extends React.Component{
                                         textOverflow: "ellipsis",
                                         padding:10
                                 }}>{item.ArtDes}</div>
-                                <CardMedia style={{height:this.state.heightimg, width:80, position:'relative',left:this.state.leftimg+'%'}} image={Constantes.CONEXION_PRODUCCION+"Content/Assets/Images/"+item.ArtSku+".png"}>
+                                <CardMedia style={{height:this.state.heightimg, width:80, marginLeft:this.state.leftimg+'%'}} image={Constantes.CONEXION_PRODUCCION+"Content/Assets/Images/"+item.ArtSku+".png"}>
 
                                 </CardMedia>
                                 <CardContent style={{ height: 50 }}>
@@ -147,9 +147,10 @@ export class Productos extends React.Component{
         const height = window.innerWidth;
         
         if(height<600){
-            this.setState({ padding:40, width:384, heightimg:180, leftimg:40, heightcard:360, marginright: 60 },()=>{console.log(this.state.height)});
+            var leftimg
+            this.setState({ padding:40, width:384, heightimg:180, leftimg:38, heightcard:360, marginright: 60 },()=>{console.log(this.state.height)});
         }else{
-            this.setState({ padding:67, width:260, heightimg:135, leftimg:30, heightcard:314, marginright: 42 },()=>{console.log(this.state.height)});
+            this.setState({ padding:67, width:260, heightimg:135, leftimg:32, heightcard:314, marginright: 42 },()=>{console.log(this.state.height)});
 
         }
     }
