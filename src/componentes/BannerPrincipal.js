@@ -28,7 +28,6 @@ constructor(props){
         sumar:0
     }
 }
-
     render(){
         return(
           <><div style={{height:this.state.heightview+"px", top:0}}></div>
