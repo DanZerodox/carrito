@@ -6,6 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.styles_header__3PFGX{
+  background-color: rgb(16, 38, 107);
+  height: 100px;
+}
+.styles_navSocial__3JBh_{
+  display: none;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

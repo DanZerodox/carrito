@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {BannerPrincipal} from './componentes/BannerPrincipal';
+import {Productos} from './componentes/Productos';
+import {Cabecera} from './componentes/Cabecera';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <BannerPrincipal></BannerPrincipal>
+    <Cabecera></Cabecera>
+    <Productos></Productos>
   </React.StrictMode>,
   document.getElementById('root')
 );
