@@ -1,6 +1,4 @@
 import * as React from 'react';
-import Button from "@material-ui/core/Button";
-import Tooltip from "@material-ui/core/Tooltip";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
